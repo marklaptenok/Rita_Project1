@@ -1,0 +1,20 @@
+3. Какой скрипт выполнится первым?
+В примере ниже подключены два скрипта small.js и big.js.
+
+Если предположить, что small.js загружается гораздо быстрее, чем big.js – какой выполнится первым?
+
+
+
+В данном примере сначала выполнится big.js а затем small.js так как тут нет атрибутов 
+<script src="big.js"></script>
+<script src="small.js"></script>
+А вот так?
+
+В данном примере сначала выполнится small.js а затем big.js так как с атрибутом async сначала загружаются те скрипты, которые весят меньше
+<script async src="big.js"></script>
+<script async src="small.js"></script>
+А так?
+
+В данном примере сначала выполнится big.js а затем small.js так как с атрибутом defer порядок загрузки скриптов сохраняется
+<script defer src="big.js"></script>
+<script defer src="small.js"></script>
